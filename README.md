@@ -54,5 +54,5 @@ The project follows a structured approach, with each stage covered in separate J
 - Required libraries:  
   ```bash
   pip install pandas numpy scikit-learn matplotlib seaborn xgboost
-Co-authored-by: Name (https://github.com/Sai-Srinivasan05)
+Co-authored-by: Sai Srinivasan[@Sai-Srinivasan05](https://github.com/Sai-Srinivasan05)
 
