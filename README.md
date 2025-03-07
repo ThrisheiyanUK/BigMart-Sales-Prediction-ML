@@ -43,7 +43,7 @@ The project follows a structured approach, with each stage covered in separate J
 - **`Mid.csv`** – Generated after handling missing values  
 - **`Final.csv`** – Processed dataset for final modeling  
 
-## 🏗Model Evaluation  
+## Model Evaluation  
 - **Metrics used:** RMSE, R² Score  
 - **Goal:** Identify the best model for accurate sales prediction  
 
