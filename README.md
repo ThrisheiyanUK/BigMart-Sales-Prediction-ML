@@ -1,9 +1,9 @@
-# 🏪 Big Mart Sales Prediction  
+# Big Mart Sales Prediction  
 
-## 📌 Project Overview  
+## Project Overview  
 This project aims to predict sales for Big Mart stores using machine learning models. The workflow includes **hypothesis generation, data exploration, handling missing values, feature engineering, and model evaluation** to determine the most accurate predictor.  
 
-## 📂 Project Structure  
+## Project Structure  
 The project follows a structured approach, with each stage covered in separate Jupyter Notebooks:  
 
 1. **[0 Hypotheses and Data Exploration.ipynb](0%20Hypotheses%20and%20Data%20Exploration.ipynb)**  
@@ -37,17 +37,17 @@ The project follows a structured approach, with each stage covered in separate J
    - Evaluating models using RMSE, R² Score  
    - Selecting the best model based on performance  
 
-## 📊 Dataset Workflow  
+## Dataset Workflow  
 - **`Test.csv`** – Used initially for testing  
 - **`Train.csv`** – Used for training models  
 - **`Mid.csv`** – Generated after handling missing values  
 - **`Final.csv`** – Processed dataset for final modeling  
 
-## 🏗️ Model Evaluation  
+## 🏗Model Evaluation  
 - **Metrics used:** RMSE, R² Score  
 - **Goal:** Identify the best model for accurate sales prediction  
 
-## 🚀 Installation & Usage  
+## Installation & Usage  
 ### Prerequisites  
 - Python  
 - Jupyter Notebook  
