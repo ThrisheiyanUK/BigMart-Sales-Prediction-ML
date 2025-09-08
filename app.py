@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS
 import pandas as pd
 import numpy as np
-from xgboost_prediction import BigMartSalesPredictor
+from src.xgboost_prediction import BigMartSalesPredictor
 import json
 import os
 import warnings
@@ -27,7 +27,7 @@ def initialize_model():
         print(f"  No pre-trained model found. Training new model...")
         try:
             # Load and train model
-            X, y = predictor.load_and_preprocess_data('Final.csv')
+            X, y = predictor.load_and_preprocess_data('data/Final.csv')
             predictor.train_model(X, y)
             predictor.save_model()
             print(" Model trained and saved successfully!")
@@ -39,7 +39,7 @@ def initialize_model():
 def get_sample_data():
     """Get sample data for analytics dashboard"""
     try:
-        df = pd.read_csv('Final.csv')
+        df = pd.read_csv('data/Final.csv')
         
         # Calculate real statistics
         total_sales_value = df['Item_Outlet_Sales'].sum()

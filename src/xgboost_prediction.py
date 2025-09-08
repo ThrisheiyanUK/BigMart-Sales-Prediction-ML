@@ -183,7 +183,7 @@ class BigMartSalesPredictor:
         predictions = self.model.predict(new_data_scaled)
         return predictions
     
-    def save_model(self, model_path='xgboost_model.pkl', scaler_path='scaler.pkl'):
+    def save_model(self, model_path='models/xgboost_model.pkl', scaler_path='models/scaler.pkl'):
         """Save the trained model and scaler"""
         if self.model is None:
             raise ValueError("Model not trained yet. Call train_model() first.")
@@ -195,14 +195,14 @@ class BigMartSalesPredictor:
             pickle.dump(self.scaler, f)
         
         # Save feature columns
-        with open('feature_columns.pkl', 'wb') as f:
+        with open('models/feature_columns.pkl', 'wb') as f:
             pickle.dump(self.feature_columns, f)
         
         print(f"Model saved to {model_path}")
         print(f"Scaler saved to {scaler_path}")
         print("Feature columns saved to feature_columns.pkl")
     
-    def load_model(self, model_path='xgboost_model.pkl', scaler_path='scaler.pkl'):
+    def load_model(self, model_path='models/xgboost_model.pkl', scaler_path='models/scaler.pkl'):
         """Load a pre-trained model and scaler"""
         try:
             with open(model_path, 'rb') as f:
@@ -211,7 +211,7 @@ class BigMartSalesPredictor:
             with open(scaler_path, 'rb') as f:
                 self.scaler = pickle.load(f)
             
-            with open('feature_columns.pkl', 'rb') as f:
+            with open('models/feature_columns.pkl', 'rb') as f:
                 self.feature_columns = pickle.load(f)
             
             print(f"Model loaded from {model_path}")
