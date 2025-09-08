@@ -1,0 +1,60 @@
+{
+  "name": "bigmart-frontend",
+  "version": "1.0.0",
+  "description": "A modern frontend dashboard for BigMart sales analytics with anime.js animations",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server --port=3000 --host=localhost --open=/",
+    "dev": "live-server --port=3000 --host=localhost --open=/ --watch=./ --ignore=node_modules",
+    "build": "npm run minify-css && npm run minify-js",
+    "minify-css": "cleancss -o dist/styles/main.min.css styles/main.css",
+    "minify-js": "terser js/main.js -o dist/js/main.min.js",
+    "serve": "python -m http.server 8000",
+    "lint": "eslint js/**/*.js",
+    "format": "prettier --write \"**/*.{html,css,js,json,md}\"",
+    "validate": "html-validate index.html"
+  },
+  "keywords": [
+    "bigmart",
+    "analytics",
+    "dashboard",
+    "anime.js",
+    "frontend",
+    "sales",
+    "data-visualization",
+    "responsive"
+  ],
+  "author": "BigMart Team",
+  "license": "MIT",
+  "dependencies": {
+    "animejs": "^3.2.1",
+    "chart.js": "^3.9.1",
+    "papaparse": "^5.4.1"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "clean-css-cli": "^5.6.2",
+    "terser": "^5.19.2",
+    "eslint": "^8.45.0",
+    "prettier": "^3.0.0",
+    "html-validate": "^7.16.0",
+    "nodemon": "^3.0.1"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/bigmart-frontend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/bigmart-frontend/issues"
+  },
+  "homepage": "https://github.com/your-username/bigmart-frontend#readme"
+}
